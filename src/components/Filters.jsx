@@ -2,10 +2,16 @@ import React from 'react';
 
 export default function Filters({ setFilteredItems, items }) {
   const handleFilter = (e) => {
-    const value = e.target.value;
-    const filtered = value === '' ? items : items.filter(item => item.category === value);
+    const value = e.target.value.trim().toLowerCase();
+
+    const filtered =
+      value === ''
+        ? items
+        : items.filter(item => item.category.trim().toLowerCase() === value);
+
     setFilteredItems(filtered);
   };
+
   return (
     <div className="filters">
       <select onChange={handleFilter}>

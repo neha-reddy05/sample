@@ -13,9 +13,19 @@ export default function Cart({ cartItems, removeFromCart }) {
             <div key={index} className="item-card">
               <h3>{item.name}</h3>
               <p>₹{item.price}</p>
-              <button onClick={() => removeFromCart(index)} className="delete-btn">
-                Delete
-              </button>
+              <div style={{ display: 'flex', gap: '1rem' }}>
+                <button onClick={() => removeFromCart(index)} className="delete-btn">
+                  Delete
+                </button>
+                <a
+                  href={`https://wa.me/917995439410?text=Hi,%20I'm%20interested%20in%20your%20item:%20${encodeURIComponent(item.name)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="whatsapp-btn"
+                >
+                  Message
+                </a>
+              </div>
             </div>
           ))
         )}
