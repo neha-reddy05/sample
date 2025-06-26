@@ -23,6 +23,20 @@ body {
   color: #c49e60;
 }
 
+/* Vite starter logo override */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
 .navbar a {
   margin-left: 1rem;
   text-decoration: none;
@@ -86,6 +100,7 @@ body {
 .item-card button:hover {
   background-color: #ad864b;
 }
+
 /* Add this at the end of App.css */
 .fixed-navbar {
   position: fixed;
@@ -94,14 +109,14 @@ body {
   right: 0;
   z-index: 1000;
 }
+
 .cart {
   padding: 2rem 3rem;
 }
 
 .cart h2 {
   margin-bottom: 1.5rem;
-  align-items: flex-start;     /* Aligns top edges */
-
+  align-items: flex-start; /* Aligns top edges */
 }
 
 .cart p {
@@ -111,8 +126,7 @@ body {
 }
 
 .cart-items {
-  align-items: flex-start;     /* Aligns top edges */
-
+  align-items: flex-start; /* Aligns top edges */
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
@@ -131,4 +145,35 @@ body {
 
 .delete-btn:hover {
   background-color: #e60000;
+}
+
+/* Vite starter styles */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
 }

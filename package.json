@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "home",
+=======
+  "name": "login",
+>>>>>>> 8a68ea104210b1e4c829bdda04d35332e020b0b2
   "private": true,
   "version": "0.0.0",
   "type": "module",
